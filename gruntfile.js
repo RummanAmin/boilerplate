@@ -3,7 +3,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     uglify: {
