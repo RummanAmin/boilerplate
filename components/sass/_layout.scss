@@ -1,0 +1,30 @@
+//Susy setup ------------------------------------
+$total-columns        : 12;
+$column-width         : 4em;
+$gutter-width         : 1em;
+$grid-padding         : $gutter-width;
+
+@include border-box-sizing;
+
+$small                : 30em;
+$medium               : 47em;
+$large                : 75em;
+
+//Content ------------------------------------
+.band {
+	display: block;
+	padding: 1em 0;
+	width: 100%;
+	@include clearfix;
+}
+
+.layout {
+  @include container;
+  padding: 5%;
+}
+
+	//Header ------------------------------------
+
+	//Main ------------------------------------
+
+	//Footer------------------------------------

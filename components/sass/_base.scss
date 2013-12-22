@@ -1,0 +1,48 @@
+body {
+	font-family: $font-primary;
+  font-size: 1.2rem;
+  line-height: 160%;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+}
+
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+#{headings()} {
+  font-family: $font-secondary;
+  font-weight: normal;
+  color: $darkgray;
+}
+
+h1 { 
+	font-size: 2.2rem;	
+}
+
+
+h2 { 
+	font-size: 1.5rem; 
+}
+
+
+h3 { 
+	font-size: 1.8rem; 
+}
+
+p {
+	font-size: 1rem;
+	line-height: 140%;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+}
