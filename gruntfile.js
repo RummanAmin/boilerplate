@@ -2,7 +2,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     uglify: {
       my_target: {
         files: {
@@ -17,6 +20,16 @@ module.exports = function(grunt) {
         } //options
       } //dev
     }, //compass
+    imagemin: {
+      dynamic: {
+        files: [{
+            expand: true,
+            cwd: 'img/',
+            src: ['**/*.{png,jpg,gif}'],
+            dest: 'img/'
+        }]
+      }
+    },
     watch: {
       options: { livereload: true },
       scripts: {
@@ -29,7 +42,14 @@ module.exports = function(grunt) {
       }, //sass
       html: {
         files: ['*.html']
-      }
+      }, //html
+      images: {
+        files: ['img/**/*.{png,jpg,gif}', 'img/*.{png,jpg,gif}'],
+        tasks: ['imagemin'],
+        options: {
+          spawn: false,
+        }
+      } //images
     } //watch
   }) //initConfig
   grunt.registerTask('default', 'watch');
