@@ -10,9 +10,9 @@
 }
 
 .layout {
-  @include container(95%);
+  @include container(92%);
   @include breakpoint($medium) {
-	  @include container(92%);
+	  @include container(85%);
 	}
 	@include breakpoint($large) {
 	  @include container(80%);
