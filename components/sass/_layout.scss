@@ -1,6 +1,6 @@
 // Content ----------------------------------------
 .band {
-	@include clearfix;
+	@include pie-clearfix;
 	@include breakpoint($medium) {
 	  padding: 3em 0;
 	}
@@ -10,14 +10,13 @@
 }
 
 .layout {
-  @include container(80%);
+  @include container(95%);
   @include breakpoint($medium) {
-	  padding: 0 8%;
+	  @include container(92%);
 	}
 	@include breakpoint($large) {
-	  padding: 0 10%;
+	  @include container(80%);
 	}
-  padding: 0 5%;
 }
 
 // Header -----------------------------------------
