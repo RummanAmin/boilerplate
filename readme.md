@@ -5,7 +5,7 @@ This is a combination of:
 - Compass
 - Susy
 
-Last update: 22 December 2013
+Last update: 29 April 2014
 
 ## Workflow
 ### Install
