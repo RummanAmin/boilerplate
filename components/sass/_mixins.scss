@@ -1,0 +1,29 @@
+@mixin article-space {
+	article {
+		margin-bottom: 2em;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		overflow: hidden;
+	}
+	@include at-breakpoint($medium) {
+		article {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@mixin remove-header-space {
+	#{headings()} {
+	  &:first-of-type {
+	  	margin-top: 0;
+		  padding-top: 0;
+	  }
+	}
+}
+
+@mixin image-auto {
+	img {
+		width: auto;
+	}
+}

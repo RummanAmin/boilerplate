@@ -2,7 +2,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     uglify: {
@@ -19,14 +19,13 @@ module.exports = function(grunt) {
         } 
       } 
     }, 
-    imagemin: {
-      dynamic: {
-        files: [{
-            expand: true,
-            cwd: 'img/',
-            src: ['**/*.{png,jpg,gif}'],
-            dest: 'img/'
-        }]
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 version', 'ie 8', 'ie 9']
+      },
+      single_file: {
+        src: 'css/style.css',
+        dest: 'css/style.css'
       }
     },
     watch: {
@@ -42,13 +41,10 @@ module.exports = function(grunt) {
       html: {
         files: ['*.html']
       }, 
-      images: {
-        files: ['img/**/*.{png,jpg,gif}', 'img/*.{png,jpg,gif}'],
-        tasks: ['imagemin'],
-        options: {
-          spawn: false
-        }
-      } 
+      styles: {
+          files: ['css/style.css'],
+          tasks: ['autoprefixer']
+      }
     } 
   }) 
   grunt.registerTask('default', 'watch');
