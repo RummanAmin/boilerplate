@@ -6,7 +6,7 @@
 		}
 		overflow: hidden;
 	}
-	@include at-breakpoint($medium) {
+	@include breakpoint($medium) {
 		article {
 			margin-bottom: 0;
 		}

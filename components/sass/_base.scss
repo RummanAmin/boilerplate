@@ -1,7 +1,7 @@
 body {
-  font-size: 1.2rem;
+  font-size: 100%;
 	font-family: $font-primary;
-  line-height: 160%;
+  line-height: 140%;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: none;
 }
@@ -18,22 +18,21 @@ body {
 }
 
 h1 { 
-	font-size: 2.2rem;	
+	font-size: 2.2em;	
 }
 
 
 h2 { 
-	font-size: 1.8rem; 
+	font-size: 1.8em; 
 }
 
 
 h3 { 
-	font-size: 1.5rem; 
+	font-size: 1.5em; 
 }
 
 p {
-	font-size: 1.1rem;
-	line-height: 140%;
+	font-size: 1.1em;
 }
 
 ul {
