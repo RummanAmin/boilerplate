@@ -1,4 +1,20 @@
 // General ------------------------------------------
 // Navigation ---------------------------------------
 // Miscellaneous ------------------------------------
+.button, input[type="submit"] {
+	background: $orange;
+	color: $white;
+	display: inline-block;
+	padding: .4em .9em;
+	margin-top: 1em;
+	text-align: center;
+  border: none;
+  outline: none;
+	@include border-radius(1px);
+	&:hover, &:focus {
+		background: lighten($orange, 4);
+		color: $white;
+	}
+}
+
 // Plugins ------------------------------------------

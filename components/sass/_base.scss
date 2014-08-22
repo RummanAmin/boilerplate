@@ -1,6 +1,7 @@
 body {
   font-size: 100%;
 	font-family: $font-primary;
+	font-weight: 300;
   line-height: 140%;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: none;
@@ -12,9 +13,10 @@ body {
 }
 
 #{headings()} {
-  color: $darkgray;
-  font-weight: bold;
+  color: $darkgrey;
+  font-weight: 400;
   font-family: $font-secondary;
+  line-height: 1.3;
 }
 
 h1 { 
@@ -46,8 +48,26 @@ img {
 	width: 100%;
 }
 
-input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], textarea, select {
-	margin-bottom: .9em;
-	padding: .3em;
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	width: 100%;
+	// max-width: 360px;
+	background: $lightgrey url("../img/icons/dropdown-icon.png") no-repeat right 0px !important;
+	border: none;
+	padding: 10px;
+	margin-top: 10px;
+	display: block;
+	border-radius: 0;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], #message {
+	width: 100%;
+	padding: .5em;
+	margin-bottom: .9em;
+	background: $lightgrey;
+	border: none;
 }
