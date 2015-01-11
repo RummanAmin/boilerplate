@@ -1,12 +1,8 @@
 // Content ----------------------------------------
-* {
-	@include border-box-sizing;
-}
-
 .band {
 	@include pie-clearfix;
 	@include breakpoint($medium) {
-	  padding: 3em 0;
+	  padding: 4em 0;
 	}
 	display: block;
 	padding: 1em 0;
@@ -20,7 +16,7 @@
 	  @include container(85%);
 	}
 	@include breakpoint($large) {
-	  @include container(80%);
+	  @include container(68em);
 	}
 }
 

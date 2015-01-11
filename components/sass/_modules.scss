@@ -1,4 +1,26 @@
 // General ------------------------------------------
+#go-top {
+  position: fixed;
+  right: 0;
+  bottom: 2em;
+  display: none;
+  padding: .65em .5em;
+  background: rgba(0,0,0,0.3);
+  color: $white;
+  text-decoration: none;
+  font-size: 1.35em;
+  line-height: 0;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+  &:hover {
+    background: rgba(0,0,0,0.6);
+    transition: background .2s ease-in-out;
+  }
+  img {
+    width: 1em;
+  }
+}
+
 // Navigation ---------------------------------------
 // Miscellaneous ------------------------------------
 .button, input[type="submit"] {

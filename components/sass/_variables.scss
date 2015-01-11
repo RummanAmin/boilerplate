@@ -2,12 +2,13 @@
 $susy: (
   columns: 12,
   gutters: 1/4,
-  global-box-sizing: border-box,
 );
 
 $small                : 30em;
 $medium               : 47em;
 $large                : 75em;
+
+@include border-box-sizing;
 
 // Colours -------------------------------------
 $black     			: #000000;
