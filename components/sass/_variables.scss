@@ -1,7 +1,8 @@
 // Susy ---------------------------------------
 $susy: (
   columns: 12,
-  gutters: 1/4,
+  gutters: 1/2,
+  global-box-sizing: border-box
 );
 
 $small                : 30em;
@@ -13,12 +14,18 @@ $large                : 75em;
 // Colours -------------------------------------
 $black     			: #000000;
 $white          : #FFFFFF;
-$darkgrey       : #363839;
-$lightgrey      : #E3E3E3;
 $orange         : #f7814d;
 $cream 					: #f7f5f2;
+$navy 					: #2E3E4F;
+$blue  					: #2969b0;
+$lightblue      : #2A97D6;
+$teal 					: #34B0BB;
+$grey           : #7F7F7F;
+$lightgrey      : #EEEEEE;
+$darkgrey       : #363839;
 $drupal   			: #0c76ab;
+$maroon 				: #591527;
 
 // Fonts ---------------------------------------
-$font-primary: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$font-secondary: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Crimson Text', serif;

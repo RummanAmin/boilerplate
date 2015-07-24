@@ -1,5 +1,5 @@
 @mixin article-space {
-	article {
+	article, .block, .reply {
 		margin-bottom: 2em;
 		&:last-of-type {
 			margin-bottom: 0;
@@ -7,7 +7,7 @@
 		overflow: hidden;
 	}
 	@include breakpoint($medium) {
-		article {
+		article, .block {
 			margin-bottom: 0;
 		}
 	}
@@ -22,8 +22,236 @@
 	}
 }
 
+@mixin remove-para-space {
+	#{headings()} {
+	  &:first-of-type {
+	  	margin-bottom: 0;
+		  padding-bottom: 0;
+	  }
+	}
+	p:first-of-type {
+		margin-top: 0;
+	}
+}
+
 @mixin image-auto {
 	img {
 		width: auto;
+	}
+}
+
+@mixin image-centre {
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@mixin all-white {
+	* {
+		color: $white;
+	}
+	a {
+		&:hover, &:focus {
+			color: $teal;
+		}
+	}
+}
+
+@mixin all-dark {
+	* {
+		color: $darkgrey;
+	}
+	a {
+		&:hover, &:focus {
+			color: $teal;
+		}
+	}
+}
+
+@mixin alt-headings {
+	#{headings()} {
+		color: $darkgrey;
+	}
+}
+
+@mixin article-layout {
+	article {
+		padding-left: 4%;
+		padding-right: 4%;
+		&:first-of-type {
+			@include breakpoint($medium) {
+				padding-left: 7.5%;
+				padding-right: 0;
+			}
+			@include breakpoint($large) {
+				padding-left: 10%;
+				padding-right: 0;
+			}
+		}
+		&:last-of-type {
+			@include breakpoint($medium) {
+				padding-left: 0;
+				padding-right: 7.5%;
+			}
+			@include breakpoint($large) {
+				padding-left: 0;
+				padding-right: 10%;
+			}
+		}
+	}
+}
+
+@mixin add-layout {
+		padding-left: 4%;
+		padding-right: 4%;
+	@include breakpoint($medium) {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+  @include breakpoint($large) {
+    padding-left: 37.75em;
+    padding-right: 37.75em;
+  }
+}
+
+@mixin select-white {
+	select {
+		background: $white url("../img/icons/dropdown-icon.png") no-repeat right 0px !important;
+	}
+	input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], textarea {
+		background: white;
+	}
+}
+
+@mixin two-columns {
+	article, .list-grid li {
+		@include breakpoint($medium) {
+		  &:first-of-type {
+				@include span(6);
+			}
+			&:last-of-type {
+				@include span(6 at 7);
+			}
+		}
+	}
+}
+
+@mixin three-columns {
+	article, .list-grid li {
+		@include breakpoint($medium) {
+		  &:first-of-type, &:nth-of-type(2) {
+				@include span(4);
+			}
+			&:last-of-type {
+				@include span(4 at 9);
+			}
+		}
+	}
+}
+
+@mixin four-columns {
+	article, .list-grid li {
+		@include breakpoint($medium) {
+		  &:first-of-type, &:nth-of-type(2), &:nth-of-type(3) {
+				@include span(3);
+			}
+			&:last-of-type {
+				@include span(3 at 10);
+			}
+		}
+	}
+}
+
+@mixin six-columns {
+	article, .list-grid li {
+		@include breakpoint($medium) {
+		  @include gallery(3 of 12);
+		}
+		@include breakpoint($large) {
+		  @include gallery(2 of 12);
+		}
+	}
+}
+
+@mixin compact {
+	article {
+		@include breakpoint($medium) {
+		  width: 80%;
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		}
+	}
+}
+
+@mixin smooth {
+  transition: all .5s ease-in-out;
+  &:hover, &:focus {
+    transition: all .5s ease-in-out;
+  }
+}
+
+@mixin eight-four-split {
+	article {
+		@include breakpoint($medium) {
+			&:first-of-type {
+				@include span(8);
+			}
+			&:last-of-type {
+				@include span(4 at 9);
+			}
+		}
+	}
+}
+
+@mixin four-eight-split {
+	article {
+		@include breakpoint($medium) {
+			&:first-of-type {
+				@include span(4);
+			}
+			&:last-of-type {
+				@include span(8 at 5);
+			}
+		}
+	}
+}
+
+@mixin six-three-three {
+	article {
+		@include breakpoint($medium) { 
+			&:first-of-type {
+				@include span(6);
+			}
+			&:nth-of-type(2) {
+				@include span(3);
+			}
+			&:last-of-type {
+				@include span(3 at 10);
+			}
+		}
+	}
+}
+
+.move-right {
+	article {
+		@include breakpoint($medium) {
+			&:first-of-type {
+				float: right !important;
+				margin-right: 0 !important;
+			}
+			&:last-of-type {
+				float: left !important;
+				margin-left: 0 !important;
+			}
+		}
+	}
+}
+
+@mixin list-dash {
+	li:before, .field-item:before {
+		content: "-";
+		margin-right: .5em;
 	}
 }
