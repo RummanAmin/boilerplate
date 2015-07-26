@@ -49,9 +49,8 @@ module.exports = function(grunt) {
         files: ['components/sass/*.scss'],
         tasks: ['compass:dev', 'autoprefixer']
       },
-      livereload: {
-        options: { livereload: true },
-        files: ['css/style.css']
+      options: {
+        livereload: true,
       } 
     } 
   }) 
